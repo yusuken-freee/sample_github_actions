@@ -3,12 +3,12 @@ on:
     types: synchronize
 
 jobs:
-  runs-on: ubuntu-latest
+  runs-on: ubuntu-18.04
   steps:
-  - name: echo_new_commit
-    run: |
-      echo "github.event.number : ${github.event.number} "
-      echo "github.event_name : ${github.event_name} "
-      echo "github.event : ${github.event.label} "
-      echo "!!! new commit has been pushed to !!!"
+    - name: echo_new_commit
+      run: |
+        echo "github.event.number : ${github.event.number} "
+        echo "github.event_name : ${github.event_name} "
+        echo "github.event : ${github.event.label} "
+        echo "!!! new commit has been pushed to !!!"
  

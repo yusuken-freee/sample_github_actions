@@ -3,10 +3,10 @@ on:
     types: unlabeled
 
 jobs:
-  runs-on: ubuntu-latest
+  runs-on: ubuntu-lat
   steps:
-  - name: echo_unlabeled
-    run: |
-      echo "unlabeled !!!"
-      aws --version
-      docker -v
+    - name: echo_unlabeled
+      run: |
+        echo "unlabeled !!!"
+        aws --version
+        docker -v
