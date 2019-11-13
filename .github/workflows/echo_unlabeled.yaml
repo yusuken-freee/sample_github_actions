@@ -1,7 +1,8 @@
 name: UNLABELED
 on:
   pull_request:
-    types: unlabeled
+    types:
+      - unlabeled
 
 jobs:
   runs-on: ubuntu-lat
