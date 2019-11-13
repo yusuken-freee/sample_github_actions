@@ -10,8 +10,11 @@ jobs:
     steps:
       - name: echo_new_commit
         run: |
-          echo "github.event.number : ${github.event.number} "
-          echo "github.event_name : ${github.event_name} "
-          echo "github.event : ${github.event.label} "
+          number=${{github.event.number}}
+          name=${{github.event_name}}
+          repo=${{github.event.head.repo.url}}
+          echo "github.event.number : ${number} "
+          echo "github.event_name : ${name} "
+          echo "github.event.head.repo.url : ${repo} "
           echo "!!! new commit has been pushed to !!!"
  
