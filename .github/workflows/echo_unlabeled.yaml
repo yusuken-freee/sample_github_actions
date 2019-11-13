@@ -1,3 +1,4 @@
+name: UNLABELED
 on:
   pull_request:
     types: unlabeled

@@ -1,3 +1,4 @@
+name: LABELED
 on:
   pull_request:
     types: labeled
