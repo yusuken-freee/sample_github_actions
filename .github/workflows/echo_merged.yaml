@@ -1,0 +1,27 @@
+name: SYNC
+on:
+  pull_request:
+    types:
+      - closed 
+
+jobs:
+  sync:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: echo_new_commit
+        run: |
+          number=${{github.event.number}}
+          name=${{github.event_name}}
+          repo=${{github.head_ref}}
+          action=${{github.event.action}}
+          merged=${{github.event.pull_request.merged}}
+          if [[ "$merged" = "true" ]];then
+            echo "action is $action"
+            echo "THIS PR IS MERGED YEAHHHHH!!!!"
+          fi
+          echo "github.event.number : ${number} "
+          echo "github.event_name : ${name} "
+          echo "github.head_ref : ${repo} "
+          echo "github.event.action : ${action} "
+          echo "github.event.action : ${{github.event.action}} "
+          echo "!!! new commit has been pushed to !!!"
