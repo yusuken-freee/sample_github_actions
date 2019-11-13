@@ -3,8 +3,8 @@ on:
     types: labeled
 
 jobs:
-  runs-on: ubuntu-latest
+  runs-on: ubuntu-18.04
   steps:
-  - name: echo_labeled
-    run: |
-      echo "label created event is triggered"
+    - name: echo_labeled
+      run: |
+        echo "label created event is triggered"
