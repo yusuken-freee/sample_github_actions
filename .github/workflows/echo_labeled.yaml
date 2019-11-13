@@ -11,6 +11,5 @@ jobs:
       - name: echo_labeled
         run: |
           echo "label created event is triggered"
-          labels=${{join(github.event.pull_request.labels, "hogehoge")}}
+          labels=${{join(github.event.pull_request.labels)}}
           echo "labels are $labels"
-
