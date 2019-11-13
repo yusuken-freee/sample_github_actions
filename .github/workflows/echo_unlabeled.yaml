@@ -1,0 +1,12 @@
+on:
+  pull_request:
+    types: unlabeled
+
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+  - name: echo_unlabeled
+    run: |
+      echo "unlabeled !!!"
+      aws --version
+      docker -v
