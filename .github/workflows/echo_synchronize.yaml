@@ -12,9 +12,12 @@ jobs:
         run: |
           number=${{github.event.number}}
           name=${{github.event_name}}
-          repo=${{github.event.head.repo.url}}
+          repo=${{github.head_ref}}
+          action=${{github.event.action}}
           echo "github.event.number : ${number} "
           echo "github.event_name : ${name} "
-          echo "github.event.head.repo.url : ${repo} "
+          echo "github.head_ref : ${repo} "
+          echo "github.event.action : ${action} "
+          echo "github.event.action : ${{github.event.action}} "
           echo "!!! new commit has been pushed to !!!"
  
