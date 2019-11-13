@@ -1,6 +1,8 @@
+name: SYNC
 on:
   pull_request:
-    types: synchronize
+    types:
+      - synchronize
 
 jobs:
   runs-on: ubuntu-18.04
