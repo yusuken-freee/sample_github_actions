@@ -5,8 +5,9 @@ on:
       - labeled
 
 jobs:
-  runs-on: ubuntu-18.04
-  steps:
-    - name: echo_labeled
-      run: |
-        echo "label created event is triggered"
+  labeled:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: echo_labeled
+        run: |
+          echo "label created event is triggered"

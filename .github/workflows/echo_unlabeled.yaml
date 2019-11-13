@@ -5,10 +5,11 @@ on:
       - unlabeled
 
 jobs:
-  runs-on: ubuntu-lat
-  steps:
-    - name: echo_unlabeled
-      run: |
-        echo "unlabeled !!!"
-        aws --version
-        docker -v
+  unlabeled:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: echo_unlabeled
+        run: |
+          echo "unlabeled !!!"
+          aws --version
+          docker -v
